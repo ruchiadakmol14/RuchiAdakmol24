@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+*{
+    margin: 0;
+    padding: 0%;
+    border: 0;
+    box-sizing: border-box;
+    outline: none;
+    font-family: 'Poppins';
+}
+
+.container{
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(45deg, #F1B843, #F3A401);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.box{
+    width: 350px;
+    border-radius: 18px;
+    background-color: white;
+    text-align: center;
+    padding: 50px 32px;
+    position: relative;
+}
+
+h1{
+    margin-bottom: 60px;
+    font-size: 40px;
+}
+
+.underline-h1u{
+    content: '';
+    position: absolute;
+    height: 6px;
+    width: 43px;
+    border-radius: 4px;
+    top: 97px;
+    left: 122px;
+    background: linear-gradient(45deg, #F1B843, #F3A401);
+}
+
+.name, .password{
+    margin-left: -85px;
+    position: relative;
+}
+
+.name{
+    margin-bottom: 15px;
+}
+
+.password{
+    margin-bottom: 60px;
+}
+
+.underline::before{
+    content: '';
+    position: absolute;
+    height: 1px;
+    width: 235px;
+    top: 27px;
+    left: 109px;
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.underline::after{
+    content: '';
+    position: absolute;
+    height: 1px;
+    width: 235px;
+    top: 27px;
+    left: 109px;
+    background: linear-gradient(45deg, #F1B843, #F3A401);
+    transform: scaleX(0);
+    transition: all .3s ease-in-out;
+    transform-origin: left;
+}
+
+input:focus ~ .underline::after{
+    transform: scaleX(1);
+}
+
+.button-submit{
+    width: 250px;
+    height: 45px;
+    border-radius: 10px;
+    background: linear-gradient(45deg, #F1B843, #F3A401);
+    color: white;
+    font-weight: bold;
+    font-size: 25px;
+    transition: all .3s ease-out;
+    cursor: pointer;
+}
+
+.button-submit:hover{
+    background: linear-gradient(45deg, #F3A401, #F1B843);
+    letter-spacing: 1px;
+    font-size: 27px;
+}
